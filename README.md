@@ -5,9 +5,9 @@ This is a web application built using Node.js, Express, EJS, CSS, and JavaScript
 ## Features
 
 - **Task Management:**
-  - Add, edit, and delete tasks.
+  - Add and delete tasks.
   - Mark tasks as completed.
-  - Organize tasks based on priority.
+  
 
 - **Real-Time Messaging:**
   - Chat with other users in real-time.
