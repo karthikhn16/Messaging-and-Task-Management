@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Chat</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/tasks"> Manage Tasks</a>
+        <a href="/register-login"> Message</a>
+        <a href="/inbox">Inbox</a>
+        <a href="/about">About</a>
+    </div>
+<br>
+    <div class="container">
+        <h1>Welcome, <%= currentUser %></h1>
+
+        <h2>Write new message</h2>
+
+        <form id="messageForm">
+            <input type="text" id="messageInput" placeholder="Type a message...">
+
+            <div>
+                <h2>Select Recipient:</h2>
+                <select id="recipientSelect">
+                    <option value="all">All Users</option>
+                    <% users.forEach(user => { %>
+                        <option value="<%= user %>"><%= user %></option>
+                    <% }); %>
+                </select>
+            </div>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script>
+        const currentUser = '<%= currentUser %>';
+    </script>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

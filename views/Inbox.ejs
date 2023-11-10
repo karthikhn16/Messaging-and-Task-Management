@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox</title>
+    <link rel="stylesheet" href="/css/inbox.css"> <!-- Assuming you have a separate CSS file named styles.css -->
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/tasks"> Manage Tasks</a>
+        <a href="/register-login"> Message</a>
+        <a href="/inbox">Inbox</a>
+        <a href="/about">About</a>
+    </div>
+    <h2>Inbox:</h2>
+  
+        <% messages.forEach(message => { %>
+            <div class="inbox-container">
+            <div class="message-card">
+                <div class="sender"><%= message.sender %>:</div>
+                <div class="message-content"><%= message.message %></div>
+            </div>
+        </div>
+        <% }); %>
+    
+</body>
+</html>
